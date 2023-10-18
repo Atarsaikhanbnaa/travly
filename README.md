@@ -1,6 +1,6 @@
 # **Travly - Аялъя товч танилцуулга**
 
-<img src="assets/travly.png" alt="logo" width="200">
+<img src="assets/travly.png" alt="logo">
 
 ## Манай веб сайт
 
