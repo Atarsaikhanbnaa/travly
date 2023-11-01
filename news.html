@@ -5,15 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News - Travly</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="news.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <header>
+    <header class ="home-main">
         <nav>
-            <img src="assets/news_pics.jpg" alt="NewsMain" class="background-image">
-            <div>
                 <a href="./">
                     <img src="assets/travly.png" alt="Travly">
                 </a>
@@ -27,28 +25,29 @@
                     <i class="fa fa-search"></i>
                     <input type="text" id="searchMain" placeholder="Search...">
                 </form>
-            </div>
-            <h1>Travel News</h1>
         </nav>
+        <h1>Travel News</h1>
     </header>
     <main>
-        <form>
+        <form class="search-news">
             <i class="fa fa-search"></i>
             <input type="text" id="searchNews" placeholder="Search news">
         </form>
-        <label for="filter">Filter:</label>
-        <select id="filter">
-            <option value="Budget Travel">Budget Travel</option>
-            <option value="Road Trip">Road Trip</option>
-            <option value="Travel Stories">Travel Stories</option>
-            <option value="Tips and Advice">Tips and Advice</option>
-        </select>
-        <label for="sort">Sort:</label>
-        <select id="sort">
-            <option value="Category">Category</option>
-            <option value="Date">Date</option>
-        </select>
-        <section>
+        <div class="filter-sort-container">
+            <label for="filter">Filter:</label>
+            <select id="filter">
+                <option value="Budget Travel">Budget Travel</option>
+                <option value="Road Trip">Road Trip</option>
+                <option value="Travel Stories">Travel Stories</option>
+                <option value="Tips and Advice">Tips and Advice</option>
+            </select>
+            <label for="sort">Sort:</label>
+            <select id="sort">
+                <option value="Category">Category</option>
+                <option value="Date">Date</option>
+            </select>
+        </div>        
+        <section class="news-grid">
             <article>
                 <img src="assets/travel_stories.jpg" alt="News1">
                 <h6>Travel stories</h6>
@@ -89,9 +88,9 @@
                     attractions, Singapore is a top destination for kids. </p>
                 <div>Sep 6, 2023 -5 min read</div>
             </article>
-        </section>
+        </section>        
         <h2>Traveling on a budget</h2>
-        <section>
+        <section class="budget-travel-grid">
             <article>
                 <img src="assets/budget_travel1.jpg" alt="Budget1">
                 <h3>How to visit Florida on a budget</h3>
@@ -125,14 +124,15 @@
             </li>
             <li class="column">
                 <ul class="links">
-                    <li class="follow"><a href="">Биднийг дагаарай</a></li>
-                    <li class="social"><a href="#"><img src="assets/facebook.png" alt="Facebook"></a></li>
-                    <li class="social"><a href="#"><img src="assets/instagram.png" alt="Instagram"></a></li>
-                    <li class="social"><a href="#"><img src="assets/twitter.png" alt="Twitter"></a></li>
-                    <li class="social"><a href="#"><img src="assets/linkedin.png" alt="LinkedIn"></a></li>
+                    <li class="social"><a href="">Биднийг дагаарай</a></li>
+                        <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="assets/twitter.png" alt="Twitter"></a>
+                        <a href="#"><img src="assets/linkedin.png" alt="LinkedIn"></a>
+                    </li>
                 </ul>
             </li>
         </ul>
-    </footer>
+    </footer>  
 </body>
 </html>

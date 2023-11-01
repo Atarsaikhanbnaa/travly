@@ -5,15 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destinations - Travly</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="destinations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <header>
+    <header class ="home-main">
         <nav>
-            <img src="assets/destination_pics.jpg" alt="DestMain" class="background-image">
-            <div>
                 <a href="./">
                     <img src="assets/travly.png" alt="Travly">
                 </a>
@@ -27,24 +25,31 @@
                     <i class="fa fa-search"></i>
                     <input type="text" id="searchMain" placeholder="Search...">
                 </form>
-            </div>
-            <h1>Destinations</h1>
         </nav>
+        <h1>Destinations</h1>
     </header>
     <main>
-        <form>
+        <form class="search-places">
             <i class="fa fa-search"></i>
-            <input type="text" id="searchNews" placeholder="Search places">
+            <input type="text" id="searchPlaces" placeholder="Search places">
         </form>
-        <input type="radio" id="sort-favorites" name="sort" value="Favorites"> <label
-            for="sort-favorites">Favorites</label>
-        <input type="radio" id="sort-asia" name="sort" value="Asia"> <label for="sort-asia">Asia</label>
-        <input type="radio" id="sort-europe" name="sort" value="Europe"> <label for="sort-europe">Europe</label>
-        <input type="radio" id="sort-northamerica" name="sort" value="NorthAmerica"> <label
-            for="sort-northamerica">North America</label>
-        <input type="radio" id="sort-southamerica" name="sort" value="SouthAmerica"> <label
-            for="sort-southamerica">South America</label>
-        <section>
+        <div class="radio-container">
+            <input type="radio" id="sort-favorites" name="sort" value="Favorites">
+            <label for="sort-favorites">Favorites</label>
+            
+            <input type="radio" id="sort-asia" name="sort" value="Asia">
+            <label for="sort-asia">Asia</label>
+            
+            <input type="radio" id="sort-europe" name="sort" value="Europe">
+            <label for="sort-europe">Europe</label>
+            
+            <input type="radio" id="sort-northamerica" name="sort" value="NorthAmerica">
+            <label for="sort-northamerica">North America</label>
+            
+            <input type="radio" id="sort-southamerica" name="sort" value="SouthAmerica">
+            <label for="sort-southamerica">South America</label>
+        </div>        
+        <section class="city-grid">
             <article>
                 <a href="city.html">
                     <img src="assets/bali.jpg" alt="Bali">
@@ -127,15 +132,15 @@
             </li>
             <li class="column">
                 <ul class="links">
-                    <li class="follow"><a href="">Биднийг дагаарай</a></li>
-                    <li class="social"><a href="#"><img src="assets/facebook.png" alt="Facebook"></a></li>
-                    <li class="social"><a href="#"><img src="assets/instagram.png" alt="Instagram"></a></li>
-                    <li class="social"><a href="#"><img src="assets/twitter.png" alt="Twitter"></a></li>
-                    <li class="social"><a href="#"><img src="assets/linkedin.png" alt="LinkedIn"></a></li>
+                    <li class="social"><a href="">Биднийг дагаарай</a></li>
+                        <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="assets/twitter.png" alt="Twitter"></a>
+                        <a href="#"><img src="assets/linkedin.png" alt="LinkedIn"></a>
+                    </li>
                 </ul>
             </li>
         </ul>
-    </footer>
+    </footer>    
 </body>
-
 </html>

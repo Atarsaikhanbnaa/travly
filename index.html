@@ -5,15 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Travly</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <header>
+    <header class ="home-main">
         <nav>
-            <img src="assets/home_pics.jpg" alt="HomeMain" class="background-image">
-            <div>
                 <a href="./">
                     <img src="assets/travly.png" alt="Travly">
                 </a>
@@ -27,12 +25,11 @@
                     <i class="fa fa-search"></i>
                     <input type="text" id="searchMain" placeholder="Search...">
                 </form>
-            </div>
-            <h1>Discover story-worthy travel moments</h1>
         </nav>
+        <h1>Discover story-worthy travel moments</h1>
     </header>
     <main>
-        <div>
+        <div class="icon-container">
             <article>
                 <a href="./">
                     <img src="assets/trending.png" alt="Trending">
@@ -58,32 +55,34 @@
                 </a>
             </article>
         </div>
-        <section>
-            <h2>Where to next</h2>
-            <button>View all destinations</button>
-            <article class="italy">
-                <img src="assets/italy.jpg" alt="Italy">
+        <section class="destination-grid">
+            <article class="destination italy">
+                <img src="assets/italy.png" alt="Italy">
                 <h4>Italy</h4>
-                <p><span id="cost">$147</span>/Day</p>
+                <p><span class="cost">$147</span>/Day</p>
             </article>
-            <article class="england">
-                <img src="assets/england.jpg" alt="England">
+            <article class="destination england">
+                <img src="assets/england.png" alt="England">
                 <h4>England</h4>
-                <p><span id="cost">$120</span>/Day</p>
+                <p><span class="cost">$120</span>/Day</p>
             </article>
-            <article class="mongolia">
-                <img src="assets/mongolia.jpg" alt="Mongolia">
+            <article class="destination mongolia">
+                <img src="assets/mongolia.png" alt="Mongolia">
                 <h4>Mongolia</h4>
-                <p><span id="cost">$100</span>/Day</p>
-            </article>
-        </section>
+                <p><span class="cost">$100</span>/Day</p>
+            </article> 
+            <div class="button-container">
+                <button class="button">View all destinations</button>
+            </div>
+        </section>  
         <article class="topic">
-            <img src="assets/honeymoon.jpg" alt="Honeymoon">
-            <h2>10 of the best places to go for a budget honeymoon in 2023</h2>
-            <p>Plan your perfect budget honeymoon with this guide to cheaper destinations that you might not have
-                considered.</p>
-            <div>Sep 26, 2023 - 10 min read</div>
-        </article>
+            <img src="assets/honeymoon.png" alt="Honeymoon">
+            <div class="text-content">
+                <h2>10 of the best places to go for a budget honeymoon in 2023</h2>
+                <p>Plan your perfect budget honeymoon with this guide to cheaper destinations that you might not have considered.</p>
+                <div class ="date">Sep 26, 2023 - 10 min read</div>
+            </div>
+        </article>  
     </main>
     <hr>
     <footer>
@@ -104,15 +103,15 @@
             </li>
             <li class="column">
                 <ul class="links">
-                    <li class="follow"><a href="">Биднийг дагаарай</a></li>
-                    <li class="social"><a href="#"><img src="assets/facebook.png" alt="Facebook"></a></li>
-                    <li class="social"><a href="#"><img src="assets/instagram.png" alt="Instagram"></a></li>
-                    <li class="social"><a href="#"><img src="assets/twitter.png" alt="Twitter"></a></li>
-                    <li class="social"><a href="#"><img src="assets/linkedin.png" alt="LinkedIn"></a></li>
+                    <li class="social"><a href="">Биднийг дагаарай</a></li>
+                        <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="assets/twitter.png" alt="Twitter"></a>
+                        <a href="#"><img src="assets/linkedin.png" alt="LinkedIn"></a>
+                    </li>
                 </ul>
             </li>
         </ul>
     </footer>
 </body>
-
 </html>
