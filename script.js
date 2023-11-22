@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Example city data
     var cities = [
         { name: 'London', budget: 191, foodCost: 60, accomodationCost: 71, transportationCost: 60 },
-        { name: 'Beijing', budget: 134, foodCost: 37, accomodationCost: 55, transportationCost: 42 },
-        { name: 'Berlin', budget: 207, foodCost: 55, accomodationCost: 86, transportationCost: 66 },
+        { name: 'Beijing', budget: 140, foodCost: 37, accomodationCost: 55, transportationCost: 48 },
+        { name: 'Berlin', budget: 175, foodCost: 55, accomodationCost: 54, transportationCost: 66 },
         { name: 'Tokyo', budget: 156, foodCost: 49, accomodationCost: 60, transportationCost: 47 },
         { name: 'Dubai', budget: 291, foodCost: 84, accomodationCost: 113, transportationCost: 94 }
     ];
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
         budList.innerHTML = `<li>Food ($${city.foodCost})</li>
                             <li>Accommodation ($${city.accomodationCost})</li>
                             <li>Transportation ($${city.transportationCost})</li>`;
-        imgElement.src = 'assets/' + city.name.toLowerCase() + '.jpg';
+        imgElement.src = 'assets/' + city.name.toLowerCase() + '.png';
 }
 
     // Event listener for the sort options
