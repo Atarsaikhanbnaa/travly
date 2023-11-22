@@ -7,7 +7,7 @@
     <title>Planning - Travly</title>
     <link rel="stylesheet" href="planning.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="script.js" defer></script>
+    <script src="planning.js" defer></script>
 </head>
 
 <body>
@@ -45,11 +45,16 @@
             <img class="london" src="assets/london.png" alt="London">
             <p class="budget">Estimated budget: ($191) &nbsp&nbsp </p>
             <label for="days">Filter:</label>
-            <select id="days">
-                <option value="1 day">1 day</option>
-                <option value="5 days">5 days</option>
-                <option value="10 days">10 days</option>
-            </select>
+            <div id="dayButtons">
+                <input type="radio" id="btn1day" name="filter" value="1">
+                <label for="btn1day">1 day</label>
+
+                <input type="radio" id="btn5days" name="filter" value="5">
+                <label for="btn5days">5 days</label>
+
+                <input type="radio" id="btn10days" name="filter" value="10">
+                <label for="btn10days">10 days</label>
+            </div>
             <ul class="Bud">
                 <li>Food ($60)</li>
                 <li>Accomodation ($71)</li>
