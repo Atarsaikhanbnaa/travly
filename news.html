@@ -36,10 +36,10 @@
         <div class="filter-sort-container">
             <label for="filter">Filter:</label>
             <select id="filter">
-                <option value="Budget Travel">Budget Travel</option>
-                <option value="Road Trip">Road Trip</option>
-                <option value="Travel Stories">Travel Stories</option>
-                <option value="Tips and Advice">Tips and Advice</option>
+                <option value="All">All</option>
+                <option value="road-trip">Road Trip</option>
+                <option value="travel-stories">Travel Stories</option>
+                <option value="tips-advice">Tips and Advice</option>
             </select>
             <label for="sort">Sort:</label>
             <select id="sort">
@@ -50,37 +50,37 @@
         <section class="news-grid">
             <article>
                 <img src="assets/travel_stories.jpg" alt="News1">
-                <h6>Travel stories</h6>
+                <h6 category="travel-stories">Travel Stories</h6>
                 <a href="news.html">
                     <h4>A first-timer's guide to the Midwest</h4>
                 </a>
                 <p>Think the Midwest is a cornfield you fly over between coasts? Think again. This first-timer’s guide
                     details everything you need to know about the Midwest.</p>
-                <div>Sep 19, 2023 -7 min read</div>
+                <div>Sep 26, 2023 -7 min read</div>
             </article>
             <article>
                 <img src="assets/day_trip1.jpg" alt="News2">
-                <h6>Day trip</h6>
+                <h6 category="road-trip">Road trip</h6>
                 <a href="news.html">
                     <h4>The top 9 day trips from Bogota</h4>
                 </a>
                 <p>Beyond Bogota you’ll find a wide variety of easy day trips that get you out into nature with hiking,
                     rock climbing and a surprising theme park.</p>
-                <div>Sep 26, 2023 -10 min read</div>
+                <div>Sep 25, 2023 -10 min read</div>
             </article>
             <article>
                 <img src="assets/day_trip2.jpg" alt="News3">
-                <h6>Day trip</h6>
+                <h6 category="road-trip">Road trip</h6>
                 <a href="news.html">
                     <h4>The 5 most beautiful road trips in Maine</h4>
                 </a>
                 <p>There’s no better way to explore the wildly beautiful landscapes of Maine than on a road trip. Here
                     are five of our favorites.</p>
-                <div>Sep 26, 2023 -10 min read</div>
+                <div>Sep 19, 2023 -10 min read</div>
             </article>
             <article>
                 <img src="assets/family_travel.jpg" alt="News4">
-                <h6>Family Travel</h6>
+                <h6 category="tips-advice">Tips and Advice</h6>
                 <a href="news.html">
                     <h4>The best things to do with kids in Singapore</h4>
                 </a>
@@ -133,6 +133,33 @@
                 </ul>
             </li>
         </ul>
-    </footer>  
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var filterSelect = document.getElementById('filter');
+            var newsGrid = document.getElementById('newsGrid');
+            var budgetTravelGrid = document.getElementById('budgetTravelGrid');
+
+            filterSelect.addEventListener('change', function () {
+                var selectedCategory = filterSelect.value;
+                filterNews(selectedCategory);
+            });
+
+            filterNews('All');
+
+            function filterNews(category) {
+                var articles = document.querySelectorAll('.news-grid article');
+
+                articles.forEach(function (article) {
+                    var articleCategory = article.querySelector('h6').getAttribute('category');
+                    if (category === 'All' || articleCategory === category) {
+                        article.style.display = 'block';
+                    } else {
+                        article.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>

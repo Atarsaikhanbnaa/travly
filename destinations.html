@@ -34,6 +34,9 @@
             <input type="text" id="searchPlaces" placeholder="Search places">
         </form>
         <div class="radio-container">
+            <input type="radio" id="sort-all" name="sort" value="All" checked>
+            <label for="sort-all">All</label>
+
             <input type="radio" id="sort-favorites" name="sort" value="Favorites">
             <label for="sort-favorites">Favorites</label>
             
@@ -50,55 +53,55 @@
             <label for="sort-southamerica">South America</label>
         </div>        
         <section class="city-grid">
-            <article>
+            <article data-region="Asia">
                 <a href="city.html">
                     <img src="assets/bali.jpg" alt="Bali">
                     <h4>Bali</h4>
                 </a>
             </article>
-            <article>
+            <article data-region="Asia">
                 <a href="city.html">
                     <img src="assets/baku.jpg" alt="Baku">
                     <h4>Baku</h4>
                 </a>
             </article>
-            <article>
+            <article data-region="Asia">
                 <a href="city.html">
                     <img src="assets/beijing.jpg" alt="Beijing">
                     <h4>Beijing</h4>
                 </a>
             </article>
-            <article>
+            <article data-region="Asia">
                 <a href="city.html">
                     <img src="assets/ankara.jpg" alt="Ankara">
                     <h4>Ankara</h4>
                 </a>
             </article>
-            <article>
+            <article data-region="Europe">
                 <a href="city.html">
                     <img src="assets/berlin.jpg" alt="Berlin">
                     <h4>Berlin</h4>
                 </a>
-            </article>
+            </article data-region="Europe">
             <article>
                 <a href="city.html">
                     <img src="assets/london1.jpg" alt="London">
                     <h4>London</h4>
                 </a>
             </article>
-            <article>
+            <article data-region="Asia">
                 <a href="city.html">
                     <img src="assets/dubai.jpg" alt="Dubai">
                     <h4>Dubai</h4>
                 </a>
             </article>
-            <article>
+            <article data-region="Europe">
                 <a href="city.html">
                     <img src="assets/moscow.jpg" alt="Moscow">
                     <h4>Moscow</h4>
                 </a>
             </article>
-            <article>
+            <article data-region="Asia">
                 <a href="city.html">
                     <img src="assets/tokyo.jpg" alt="Tokyo">
                     <h4>Tokyo</h4>
@@ -141,6 +144,28 @@
                 </ul>
             </li>
         </ul>
-    </footer>    
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var radioButtons = document.querySelectorAll('input[name="sort"]');
+            var articles = document.querySelectorAll('.city-grid article');
+    
+            radioButtons.forEach(function (radioButton) {
+                radioButton.addEventListener('change', function () {
+                    var selectedRegion = this.value;
+    
+                    articles.forEach(function (article) {
+                        var articleRegion = article.dataset.region;
+    
+                        if (selectedRegion === 'All' || articleRegion === selectedRegion) {
+                            article.style.display = 'block';
+                        } else {
+                            article.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>        
 </body>
 </html>
