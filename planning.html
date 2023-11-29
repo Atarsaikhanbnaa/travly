@@ -31,16 +31,15 @@
         <h1>Trip budgeting</h1>
     </header>
     <main>
-        <city-info-card head="Tokyo" estbud="160" fd="49" acc="60" trns="47" img ="/assets/tokyo.jpg"></city-info-card>
-        <city-info-card head="Bali" estbud="207" fd="81" acc="67" trns="59" img ="/assets/bali.jpg"></city-info-card>
-        <city-info-card head="Moscow" estbud="220" fd="92" acc="67" trns="61" img ="/assets/moscow.jpg"></city-info-card>
-
         <h2>Estimate your expenses</h2>
         <p class="p">Making the most of your travel budget opens up a world of possibilities. Discover how travel experts maximize points and miles, find top loyalty programs and redeem travel rewards. </p>
         <form class="search">
             <i class="fa fa-search fa-lg"></i>
             <input class="formInput" type="text" id="searchCity" placeholder="Search cities">
         </form>
+        <city-info-card head="Tokyo" estbud="160" fd="49" acc="60" trns="47" img ="assets/tokyo.jpg"></city-info-card>
+        <city-info-card head="Bali" estbud="207" fd="81" acc="67" trns="59" img ="assets/bali.jpg"></city-info-card>
+        <city-info-card head="Moscow" estbud="220" fd="92" acc="67" trns="61" img ="assets/moscow.jpg"></city-info-card>
         <h3>Sort by</h3>
         <div class="Sort"><i class="fa fa-home" aria-hidden="true"></i>Accomodation cost  </div>
         <div class="Sort"><i class='fa fa-cutlery'></i>Food cost </div>
@@ -48,7 +47,7 @@
         <section>
             <h4>London</h4>
             <img class="london" src="assets/london.png" alt="London">
-            <p class="budget">Estimated budget: ($191) &nbsp&nbsp </p>
+            <p class="budget">Estimated budget: ($191)</p>
             <label for="days">Filter:</label>
             <div id="dayButtons">
                 <input type="radio" id="btn1day" name="filter" value="1">
@@ -113,23 +112,14 @@
     </footer>
     <template id="city-info-card-template">
         <style>
-            .city-info-cards {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between; /* Adjust as needed */
-                margin: -10px; /* Adjust as needed */
-            }
-    
             .city-info-card {
                 border: 1px solid #ccc;
                 padding: 10px;
-                box-sizing: border-box;
-                flex: 0 0 calc(33.333% - 20px);
                 margin: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 border-radius: 12px;
+                width: fit-content;
             }
-    
+
             img {
                 max-width: 100%;
                 height: auto;
