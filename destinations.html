@@ -149,14 +149,31 @@
         document.addEventListener('DOMContentLoaded', function () {
             var radioButtons = document.querySelectorAll('input[name="sort"]');
             var articles = document.querySelectorAll('.city-grid article');
-    
+
+            var urlParams = new URLSearchParams(window.location.search);
+            var initialSort = urlParams.get('sort');
+
+            radioButtons.forEach(function (radioButton) {
+                if (radioButton.value === initialSort) {
+                    radioButton.checked = true;
+                }
+            });
+
+            function updateUrlParams() {
+                var selectedSort = document.querySelector('input[name="sort"]:checked').value;
+                var url = new URL(window.location.href);
+                url.searchParams.set('sort', selectedSort);
+                history.pushState({}, '', url);
+            }
+
             radioButtons.forEach(function (radioButton) {
                 radioButton.addEventListener('change', function () {
+                    updateUrlParams();
                     var selectedRegion = this.value;
-    
+
                     articles.forEach(function (article) {
                         var articleRegion = article.dataset.region;
-    
+
                         if (selectedRegion === 'All' || articleRegion === selectedRegion) {
                             article.style.display = 'block';
                         } else {
